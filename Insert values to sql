@@ -1,0 +1,38 @@
+<%-- 
+    Document   : detail
+    Created on : Feb 16, 2022, 11:04:50 AM
+    Author     : somes
+--%>
+<%@page import="java.sql.*;"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <%
+            String s1 = request.getParameter("fname");
+            String s2 = request.getParameter("lname");
+            String s3 = request.getParameter("pname");
+            String s4 = request.getParameter("ename");
+            String s5 = request.getParameter("emailname");
+            String s6 = request.getParameter("passname");
+            
+            try
+            {
+                Class.forName("com.mysql.jdbc.Driver");
+                Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hcl","root"," ");
+                Statement st = cn.createStatement();
+                String s01 ="insert into emp values('"+s1+"','"+s2+"','"+s3+"','"+s4+"','"+s5+"','"+s6+"')";
+                st.execute(s01);
+                response.sendRedirect("Login.html");
+            }
+            catch(Exception e)
+            {
+                e.printStackTrace();
+            }
+%>
+    </body>
+</html>
