@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div> 
+            <p>Register Here</p>
+            <form action="detail.jsp" method="post">
+                    <input type="text" placeholder = "First Name" name="fname"><br><br>
+                    <input type="text" placeholder="Last Name" name="lname"><br><br>
+                    <input type="number" placeholder="Phone Number" name="pname"><br><br>
+                    <input type="text" placeholder="gender" name="ename"><br><br>
+                    <input type="text" placeholder="email" name="emailname"><br><br>
+                    <input type="password" placeholder="password" name="passname"><br><br>
+                    <input type="submit" value="submits">
+            </form>
+    </body>
+</html>
